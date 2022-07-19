@@ -1,0 +1,4 @@
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.association :game, collection: Game.all.order(:title), prompt: "select a game!" %>
+  <%= f.input :comment, placeholder: "enter a comment about the game" %>
+  <% end %>
